@@ -6,28 +6,15 @@ title: About
 
 <img src="portrait.jpg" width="50%" align="right">
 
-Hello. My name is Rasmus Andersson. I'm a Swedish maker living in San Francisco with a passion for art and technology, who have worked with a number of different companies since the 1990s, including 
-[Dropbox](https://www.dropbox.com/jobs/product/design),
-[Facebook](https://facebook.com/design),
-[Spotify](https://www.spotify.com/),
-[Lear Corporation](http://lear.com/),
-Spray, and my own company Notion.
-More information can be found through [LinkedIn](http://www.linkedin.com/in/rasmusandersson).
-
-I work for & ♥ [Dropbox](https://www.dropbox.com/jobs/product/design)
-
-- [Read more about my work with Spotify &rarr;](/about/spotify/)
-- [Some of my favorite technical papers &rarr;](https://www.dropbox.com/sh/is0sy5350lr4v9j/AADQlhVSQcRw6vCNKQgGWelqa)
+Hello. My name is Lemon Yang. I am now a student,studying in gdut,major in computer sicence.I am intereted in android development a lot,as for this,I join the team,topview as a member of the android development group.
 
 
 ## Elsewhere
 
 You can find me on a variety of world wild interweb sites where my username is usually "rsms".
 
-- [Twitter](http://twitter.com/rsms) — a good way to make contact
-- [GitHub](https://github.com/rsms) — code, juicy code
-- [Instagram](http://instagram.com/rasmusfabbe/) — short stories via photo snapshots
-- [Flickr](http://www.flickr.com/photos/rsms/) — photography
-- [Facebook](http://www.facebook.com/rsms) — friends and foes
+- [Twitter](http://twitter.com/GdutLemon) — a good way to make contact
+- [GitHub](https://github.com/lemon-yang) — code, juicy code
+- [Facebook](http://www.facebook.com/) — friends and foes
 
 ### [<img src="/res/twitter.png" width="29" height="20" style="display:inline-block;vertical-align:middle"> @rsms](http://twitter.com/rsms)
