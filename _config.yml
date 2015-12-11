@@ -1,11 +1,52 @@
-auto: true
+# Site settings
+title: Lemon Blog
+SEOTitle: Lemon Yang Blog
+header-img: img/home-bg.jpg
+email: huxpro@gmail.com
+description: “to think,to experience  and to be happy”
+keyword: “lemon,lemon-yang,gdut,gdut-lemon,android,博客,安卓”
+url: "http://gdut-lemon.cc” 
 
-markdown: rdiscount
+# SNS settings
+RSS: false
+#weibo_username:     
+zhihu_username:     lemon
+github_username:    lemon-yang
+twitter_username:   GdutLemon
+facebook_username:  Lemon Yang  
+
+
+# Build settings
+highlighter: pygments
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json"]
+anchorjs: true     markdown: rdiscount
 pygments: true
 paginate: 8
 permalink: /:title
 
+
+markdown: kramdown
+kramdown:
+input: GFM     
+
+ # Duoshuo settings
+duoshuo_username: huxblog
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: true      
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: “think more and learn more”
+sidebar-avatar: /img/portrait.jpg
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1 
+
+
 title: gdut-lemon.cc
 url: http://gdut-lemon.cc
 feed: /atom.xml
-author_info: <a href="http://gdut.lemon.cc/">BeiYuu</a>
+author_info: <a href="http://gdut.lemon.cc/">BeiYuu</a>_includes
