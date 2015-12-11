@@ -1,19 +1,23 @@
 # Site settings
 title: Lemon Blog
-SEOTitle: Lemon Yang Blog
+SEOTitle: Lemon Blog
 header-img: img/home-bg.jpg
-email: huxpro@gmail.com
-description: “to think,to experience  and to be happy”
-keyword: “lemon,lemon-yang,gdut,gdut-lemon,android,博客,安卓”
-url: "http://gdut-lemon.cc” 
+email: gdut.lemon@gmail.com
+description: “to think,to experience,and to be happy”
+keyword: “lemon,lemon-yang,gdut,android,blog,gdut-lemon”
+url: "http://gdut-lemon.cc”              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+
 
 # SNS settings
 RSS: false
-#weibo_username:     
+#weibo_username:     huxpro
 zhihu_username:     lemon
 github_username:    lemon-yang
-twitter_username:   GdutLemon
-facebook_username:  Lemon Yang  
+twitter_username:  GdutLemon
+facebook_username:  Lemon Yang
+
 
 
 # Build settings
@@ -21,32 +25,51 @@ highlighter: pygments
 permalink: pretty
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json"]
-anchorjs: true     markdown: rdiscount
-pygments: true
-paginate: 8
-permalink: /:title
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-input: GFM     
+  input: GFM                            # use Github Flavored Markdown !important
 
- # Duoshuo settings
-duoshuo_username: huxblog
+
+
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
+
+# Duoshuo settings
+duoshuo_username: lemon
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true      
+duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+#ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# Google Analytics
+#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+#ga_domain: huangxuan.me
+
+
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: “think more and learn more”
-sidebar-avatar: /img/portrait.jpg
+sidebar-about-description: “stay foolish,stay hungry”
+sidebar-avatar: /img/portrait.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1 
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
 
-title: gdut-lemon.cc
-url: http://gdut-lemon.cc
-feed: /atom.xml
-author_info: <a href="http://gdut.lemon.cc/">BeiYuu</a>_includes
+
+# Friends
