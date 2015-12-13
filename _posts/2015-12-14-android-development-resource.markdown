@@ -5,7 +5,7 @@ date:       2015-12-14 01:40:00
 author:     "Lemon Yang"
 tags:
 tags:
-	-Android
+	-生活
 ---
 
 >你不会找到路，除非你敢于迷路
