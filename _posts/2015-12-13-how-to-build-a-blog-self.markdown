@@ -38,7 +38,7 @@ git作为一个版本控制系统，里面包含的学问可是非常大的，�
 
 *   一个GitHub账号只能创建一个这样的repository，从图片我们看出两种repository不同的地方
 
-![](../img/in-post/post_2015_12_13_github_pages_des.jpg)
+![](/img/in-post/post_2015_12_13_github_pages_des.jpg)
 
 *   这个repository的命名必须是username.github.io(username就是你注册的GitHub帐户名)
 
