@@ -1,9 +1,11 @@
 ---
-layout:post
-date:2015-12-13 15:30
-title:"从零开始搭建属于自己的blog"
-author:"Lemon Yang"
-
+layout:     post
+title:      "怎样搭建自己的博客"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2015-12-13 18:00:00
+author:     "Lemon Yang"
+tags:
+    - 生活
 ---
 ##为什么要搭建自己的博客##
 从很早开始，就想着拥有一个自己的博客，因为感觉这是一件很cool的事情，仿佛是在网络上拥有自己的一个家一样。
