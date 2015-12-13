@@ -1,8 +1,9 @@
 ---
-layout:	post
-date:	2015-12-14 01:30:00
-title:	"安卓开发资源推荐"
-anthor:	"Lemon Yang"
+layout:     post
+title:      "安卓开发资源推荐"
+date:       2015-12-14 01:40:00
+author:     "Lemon Yang"
+tags:
 tags:
 	-Android
 ---
