@@ -4,7 +4,7 @@ title:      "安卓开发资源推荐"
 date:       2015-12-14 02:00:00
 author:     "Lemon Yang"
 tags:
-    - android
+    - 资源分享
 ---
 
 >你不会找到路，除非你敢于迷路
