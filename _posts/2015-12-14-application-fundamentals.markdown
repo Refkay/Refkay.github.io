@@ -5,7 +5,7 @@ date:       2015-12-14 15:00:00
 author:     "Lemon Yang"
 tags:
     - android
-    -api
+    - api
 ---
 
 >本文译自android.com中Develop－>API Guides->Application Fundamentals一节。

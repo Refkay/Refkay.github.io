@@ -44,28 +44,28 @@ tags:
 
 
 
-    publicclassCalcextendsActivity{
-    publicstaticfinalStringPREFS_NAME="MyPrefsFile";
-    @Override
-    protectedvoidonCreate(Bundlestate){
-    super.onCreate(state);
-    ...
-    // Restore preferences
-    SharedPreferencessettings=getSharedPreferences(PREFS_NAME,0);
-    booleansilent=settings.getBoolean("silentMode",false);
+    public class CalcextendsActivity{
+    	public static final String PREFS_NAME="MyPrefsFile";
+    	@Override
+    	protected void onCreate(Bundlestate){
+    		super.onCreate(state);
+    		...
+    		// Restore preferences
+    				SharedPreferencessettings=getSharedPreferences(PREFS_NAME,0);
+    		boolean silent=settings.getBoolean("silentMode",false);
     setSilent(silent);
-    }
+    	}
     @Override
-    protectedvoidonStop(){
-    super.onStop();
-    // We need an Editor object to make preference changes.
-    // All objects are from android.context.Context
-    SharedPreferencessettings=getSharedPreferences(PREFS_NAME,0);
-    SharedPreferences.Editoreditor=settings.edit();
-    editor.putBoolean("silentMode",mSilentMode);
-    // Commit the edits!
-    editor.commit();
-    }
+    protected void onStop(){
+    	super.onStop();
+    	// We need an Editor object to make preference changes.
+    	// All objects are from android.context.Context
+    	SharedPreferencessettings=getSharedPreferences(PREFS_NAME,0);
+    	SharedPreferences.Editoreditor=settings.edit();
+    	editor.putBoolean("silentMode",mSilentMode);
+    	// Commit the edits!
+    	editor.commit();
+    	}
     }
 
 
@@ -75,17 +75,17 @@ tags:
 
 **你可以通过以下步骤创建一个文件并将其保存到你的内部存储设备：**
 
-* 调用openFileOutput()这个方法，并将文件的名字以及操作的模式作为参数传入，这个方法会返回一个FileOutputStream
+* 调用**openFileOutput()**这个方法，并将文件的名字以及操作的模式作为参数传入，这个方法会返回一个**FileOutputStream**
 
-* 利用write()将数据写入文件
+* 利用**write()**将数据写入文件
 
-* 利用close()这个方法关闭输入流
+* 利用**close()**这个方法关闭输入流
 
 例如：
 
-    StringFILENAME="hello_file";
-    Stringstring="hello world!";
-    FileOutputStreamfos=openFileOutput(FILENAME,Context.MODE_PRIVATE);
+    String FILENAME="hello_file";
+    String string="hello world!";
+    FileOutputStream fos=openFileOutput(FILENAME,Context.MODE_PRIVATE);
     fos.write(string.getBytes());
     fos.close();
 
@@ -93,11 +93,11 @@ tags:
 
 **你可以通过以下步骤读取内部存储的文件数据：**
 
-* 调用openFileInput()方法并将文件名字作为参数传入。这个方法会返回一个FileInputStream.
+* 调用**openFileInput()**方法并将文件名字作为参数传入。这个方法会返回一个**FileInputStream**.
 
-* 利用read()按字节读取文件中的内容
+* 利用**read()**按字节读取文件中的内容
 
-* 利用close()关闭输出流
+* 利用**close()**关闭输出流
 
 >Tip:If you want to save a static file in your application at compile time, save the file in your projectres/raw/directory. You can open it withopenRawResource(), passing theR.raw.resource ID. This method returns anInputStreamthat you can use to read the file (but you cannot write to the original file).
 
@@ -126,37 +126,37 @@ Other useful methods
 在你使用外部存储设备的时候，你应该调用方法检测外部存储设备是否可用。外部存储设备有可能正被挂载到电脑、缺失、只读或者其他的状态，例如：
 
     /* Checks if external storage is available for read and write */
-    publicbooleanisExternalStorageWritable(){
-    Stringstate=Environment.getExternalStorageState();
-    if(Environment.MEDIA_MOUNTED.equals(state)){
-    return true;
-    }
-    return false;
+    public boolean isExternalStorageWritable(){
+    	Stringstate=Environment.getExternalStorageState();
+    	if(Environment.MEDIA_MOUNTED.equals(state)){
+    		return true;
+    	}
+    	return false;
     }
  
 
     /* Checks if external storage is available to at least read */
-    publicbooleanisExternalStorageReadable(){
-    Stringstate=Environment.getExternalStorageState();
-    if(Environment.MEDIA_MOUNTED.equals(state)||
+    public boolean isExternalStorageReadable(){
+    	String state=Environment.getExternalStorageState();
+    	if(Environment.MEDIA_MOUNTED.equals(state)||
     Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)){
-    return true;
-    }
-    return false;
+    		return true;
+    	}
+    	return false;
     }
 
 一般情况下，用户能够通过你的应用打开的文件应该被存储在一个公共的路径下并且其他应用可以访问，并且用户可以轻易的在设备上拷贝这些文件。当你这样做的时候，你应该使用任意一个共享的目录，比如：**Music/,Pictures/, andRingtones/.**
 
 为了获得一个合适的公共目录的file对象，你可以调用**getExternalStoragePublicDirectory()**这个方法并将路径的类型作为参数传入，比如**DIRECTORY_MUSIC,DIRECTORY_PICTURES,DIRECTORY_RINGTONES**或者其他。通过将文件保存在直接的媒体类型的目录内，系统的多媒体扫描器可以将你的文件进行合适的分类。比如：
 
-    publicFilegetAlbumStorageDir(StringalbumName){
+    public File getAlbumStorageDir(StringalbumName){
     // Get the directory for the user's public pictures directory.
-    File file=newFile(Environment.getExternalStoragePublicDirectory(
+    	File file=newFile(Environment.getExternalStoragePublicDirectory(
     Environment.DIRECTORY_PICTURES),albumName);
-    if(!file.mkdirs()){
-    Log.e(LOG_TAG,"Directory not created");
-	}
-	return file;
+    	if(!file.mkdirs()){
+    		Log.e(LOG_TAG,"Directory not created");
+		}
+		return file;
 	}
 
 ### Saving files that are app-private
@@ -188,20 +188,20 @@ Other useful methods
 
 推荐你使用继承SQLiteOpenHelper并重写onCreate()这个方法来创建一个新的数据库。在onCreate()方法中你可以执行一个sqlite命令在数据库中创建一张表，例如：
 
-	publicclassDictionaryOpenHelperextendsSQLiteOpenHelper{
-	privatestaticfinalintDATABASE_VERSION=2;
-	privatestaticfinalStringDICTIONARY_TABLE_NAME="dictionary";
-	privatestaticfinalStringDICTIONARY_TABLE_CREATE=
-	"CREATE TABLE "+DICTIONARY_TABLE_NAME+" ("+
+	public class DictionaryOpenHelperextendsSQLiteOpenHelper{
+		private static final int DATABASE_VERSION=2;
+		private static final String DICTIONARY_TABLE_NAME="dictionary";
+		private static final String DICTIONARY_TABLE_CREATE=
+		"CREATE TABLE "+DICTIONARY_TABLE_NAME+" ("+
 	KEY_WORD+" TEXT, "+
 	KEY_DEFINITION+" TEXT);";
-	DictionaryOpenHelper(Contextcontext){
-	super(context,DATABASE_NAME,null,DATABASE_VERSION);
+		Dictionary OpenHelper(Contextcontext){
+			super(context,DATABASE_NAME,null,DATABASE_VERSION);
 	}
-	@Override
-	publicvoidonCreate(SQLiteDatabasedb){
-	db.execSQL(DICTIONARY_TABLE_CREATE);
-	}
+		@Override
+		public void onCreate(SQLiteDatabasedb){
+			db.execSQL(DICTIONARY_TABLE_CREATE);
+		}
 	}
 
 你可以获得一个你已经实现的SQLiteOpenHelper的实例通过你已经定义好的构造器。你可以调用**getWritableDatabase(),andgetReadableDatabase()**这两个方法分别获取可读和可写的数据库对象。
