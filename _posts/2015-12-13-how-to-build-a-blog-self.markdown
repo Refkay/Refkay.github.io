@@ -90,5 +90,5 @@ git作为一个版本控制系统，里面包含的学问可是非常大的，�
 	
 ---
 	
-通过以上的步骤就已经完成了我们自己的博客搭建的所有工作了，你也可以fork我的[Github项目](https://github.com/lemon-yang/lemon-yang.github.io.git)作为参考。我的博客主页也是参考了[黄玄的主页](https://github.com/Huxpro/huxpro.github.io.git)进行修改的。
+通过以上的步骤就已经完成了我们自己的博客搭建的所有工作了，你也可以fork我的[Github项目](https://github.com/lemon-yang/lemon-yang.github.io.git)作为参考。我的博客主页也是参考了[黄玄的主页](https://github.com/lemonpro/lemonpro.github.io.git)进行修改的。
 
