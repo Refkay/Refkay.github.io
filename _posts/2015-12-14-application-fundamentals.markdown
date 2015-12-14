@@ -1,11 +1,11 @@
 ---
-layout:post
-author:"Lemon Yang"
-date:2015-12-14 15:00:00
-title:"appication fundamentals"
+layout:     post
+title:      "android fundamentals"
+date:       2015-12-14 15:00:00
+author:     "Lemon Yang"
 tags:
-	-api
-	-android
+    - android
+    -api
 ---
 
 >本文译自android.com中Develop－>API Guides->Application Fundamentals一节。
