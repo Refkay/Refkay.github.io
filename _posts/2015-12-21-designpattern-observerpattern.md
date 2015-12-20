@@ -1,12 +1,10 @@
 ---
-layout:post
-date:2015-12-21 01:00:00
-author:"Lemon Yang"
-title:"安卓设计模式学习笔记－观察者模式"
+layout:     post
+title:      "安卓设计模式学习笔记－观察者模式"
+date:       2015-12-21 02:00:00
+author:     "Lemon Yang"
 tags:
-	-design pattern
-	-学习笔记
-	
+    - design pattern
 ---
 
 >你不会找到路，除非你敢于迷路
