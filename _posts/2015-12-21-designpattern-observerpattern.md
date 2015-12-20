@@ -1,7 +1,7 @@
 ---
 layout:post
 date:2015-12-21 01:00:00
-athor:"Lemon Yang"
+author:"Lemon Yang"
 title:"安卓设计模式学习笔记－观察者模式"
 tags:
 	-design pattern
