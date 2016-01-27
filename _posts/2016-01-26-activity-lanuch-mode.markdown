@@ -1,10 +1,10 @@
 ---
-layout:	post
-title:		"安卓activity的启动模式"
-date:		2016-01-26 10:00:00
-author:		"Lemon Yang"
+layout:     post
+title:      "activity的启动模式"
+date:       2016-01-26 15:00:00
+author:     "Lemon Yang"
 tags:
-	-android
+    - android
 ---
 
 ## 概述
