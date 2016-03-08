@@ -172,8 +172,8 @@ ThreadLocal其实是线程封闭的一种规范化的实现，它通过提供一
         ｝
      
 * __set()方法的实现__
-	 
-	 	/**
+
+		/**
      	* Sets the current thread's copy of this thread-local variable
      	* to the specified value.  Most subclasses will have no need to
      	* override this method, relying solely on the {@link #initialValue}
@@ -182,6 +182,7 @@ ThreadLocal其实是线程封闭的一种规范化的实现，它通过提供一
      	* @param value the value to be stored in the current thread's copy of
      	*        this thread-local.
      	*/
+     	
     	public void set(T value) {
     		//获取threadlocal对象所属的线程
         	Thread t = Thread.currentThread();
