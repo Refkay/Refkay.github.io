@@ -65,16 +65,14 @@ volatile变量可以用于提供线程安全，但是__必须同时满足__以�
     		public volatile Flooble theFlooble;
     		
     		public void initInBackground() {
-        		// do lots of stuff
-        		theFlooble = new Flooble();  // this is the only write to theFlooble
+    			theFlooble = new Flooble();  // this is the only write to theFlooble
     		}
 		}
 
 		public class SomeOtherClass {
     		public void doWork() {
-        		while (true) { 
-            		// do some stuff...
-            		// use the Flooble, but only if it is ready
+        		while (true) {
+        			// use the Flooble, but only if it is ready
             		if (floobleLoader.theFlooble != null) 
                 		doSomething(floobleLoader.theFlooble);
         		}
@@ -90,9 +88,9 @@ volatile变量可以用于提供线程安全，但是__必须同时满足__以�
 		public class UserManager {
     		public volatile String lastUser;
     		
-    		public boolean authenticate(String user, String password) {
+    		public boolean authenticate(String user, String password){
         		boolean valid = passwordIsValid(user, password);
-        		if (valid) {
+        		if (valid){
             		User u = new User();
             		activeUsers.add(u);
             		lastUser = user;
@@ -111,8 +109,10 @@ volatile变量可以用于提供线程安全，但是__必须同时满足__以�
 		public class CheesyCounter {
     		// Employs the cheap read-write lock trick
     		// All mutative operations MUST be done with the 'this' lock held
-    		@GuardedBy("this") private volatile int value;
-    		public int getValue() { return value; }
+    		@GuardedBy("this") 
+    		private volatile int value;
+    		
+    		public int getValue(){ return value; }
     		
     		public synchronized int increment() {
         		return value++;
