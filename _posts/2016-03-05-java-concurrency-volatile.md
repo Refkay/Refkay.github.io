@@ -63,6 +63,7 @@ volatile变量可以用于提供线程安全，但是__必须同时满足__以�
 	
 		public class BackgroundFloobleLoader {
     		public volatile Flooble theFlooble;
+    		
     		public void initInBackground() {
         		// do lots of stuff
         		theFlooble = new Flooble();  // this is the only write to theFlooble
@@ -88,6 +89,7 @@ volatile变量可以用于提供线程安全，但是__必须同时满足__以�
 	
 		public class UserManager {
     		public volatile String lastUser;
+    		
     		public boolean authenticate(String user, String password) {
         		boolean valid = passwordIsValid(user, password);
         		if (valid) {
@@ -107,7 +109,6 @@ volatile变量可以用于提供线程安全，但是__必须同时满足__以�
 	
 		@ThreadSafe
 		public class CheesyCounter {
-		
     		// Employs the cheap read-write lock trick
     		// All mutative operations MUST be done with the 'this' lock held
     		@GuardedBy("this") private volatile int value;
